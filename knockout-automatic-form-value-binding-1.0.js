@@ -1,12 +1,13 @@
-/**
-* knockout-automatic-form-value-binding v1.0.0 by Kees C. Bakker
-* Copyright (c) 2016 by Kees C. Bakker
-*
-* LICENSE: MIT / GIT: https://github.com/KeesCBakker/KnockoutAutomaticFormValueBinding
-*
-**/
+/*
+ knockout-automatic-form-value-binding v1.0
+ (c) 2016 Kees C. BAkker, http://keestalkstech.com/
+ GIT:  https://github.com/KeesCBakker/KnockoutAutomaticFormValueBinding
+ License: MIT
+*/
 
 (function() {
+  
+  'use strict';
 
   var z = ko.bindingHandlers.textInput.init;
   ko.bindingHandlers.textInput.init = function(element, valueAccessor, allBindings) {
