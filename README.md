@@ -6,7 +6,7 @@ Ever used KnockoutJS on an excisting form? Tired of writing model initializer co
 2. Set `ko.automaticFormValueBinding = true;`
 3. Bind `ko.applyBindings({yourmodel});`;
 
-If you want to skip a certain element use:
+If you want to skip a certain element use:<br/>
 `<input data-bind="value: name, skipInitWithElementValue" placeholder="Nothing here!" />` <br/>
 
 ## Automatic form value binding per form
