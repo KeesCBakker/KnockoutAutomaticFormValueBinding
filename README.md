@@ -30,7 +30,11 @@ Examples:<br/>
 `<input data-bind="textInput: title, initWithElementValue" value="MyTitle" placeholder="Nothing here!" />` <br/>
 `<input type="checkbox" data-bind="checked: active, initWithElementValue" checked />` <br/>
 
-## Example ASP.Net MVC - form binding per element
-`@Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "Enter a title", required = true, autofocus = true, data_bind = "textInput: title, initWithElementValue" })`
+## Examples ASP.Net MVC
+Form<br/>
+`@using (Html.BeginForm(null, null, FormMethod.Post, new { data_auto_bind_values = true }))` 
+
+Individual element:<br/>
+`@Html.TextBoxFor(x => x.Title, new {  data_bind = "textInput: title, initWithElementValue" })`
 
 Any questions? Ask on Twitter: https://twitter.com/KeesTalksTech
