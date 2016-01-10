@@ -5,35 +5,42 @@
  License: MIT
 */
 
-(function() {
-  
-  'use strict';
+(function(ko) {
 
-  var z = ko.bindingHandlers.textInput.init;
+  var _x = ko.bindingHandlers.textInput.init;
   ko.bindingHandlers.textInput.init = function(element, valueAccessor, allBindings) {
-    handleInit(element, valueAccessor, allBindings, z);
+    handleInit(element, valueAccessor, allBindings, _x);
   };
 
-  var y = ko.bindingHandlers.value.init;
+  var _y = ko.bindingHandlers.value.init;
   ko.bindingHandlers.value.init = function(element, valueAccessor, allBindings) {
-    handleInit(element, valueAccessor, allBindings, y);
+    handleInit(element, valueAccessor, allBindings, _y);
   };
 
-  var z = ko.bindingHandlers.value.init;
+  var _z = ko.bindingHandlers.checked.init;
   ko.bindingHandlers.checked.init = function(element, valueAccessor, allBindings) {
-    handleInit(element, valueAccessor, allBindings, z);
+    handleInit(element, valueAccessor, allBindings, _z);
   };
 
-  function handleInit(element, valueAccessor, allBindings, x) {
+  function handleInit(element, valueAccessor, allBindings, reroute) {
 
-    if (allBindings.has('initWithElementValue')) {
+    //check global
+    var process = ko.autoInitWithElementValues;
+    //check form
+    process = process || element.form && element.form.getAttribute('data-auto-bind-values') != null;
+    //check data-bind option
+    process = process || allBindings.has('initWithElementValue');
+    //check data-bind skip
+    process = process && !allBindings.has('skipInitWithElementValue');
 
+    if (process) {
       var value = valueAccessor();
 
       if (!ko.isWriteableObservable(value)) {
         throw new Error('Knockout "initWithElementValue" binding expects an observable.');
       }
 
+      //honor elements with checked option (checkbox / radiobox)
       if (element.type && element.type === 'checkbox') {
         valueAccessor()(element.checked);
       } else {
@@ -41,6 +48,7 @@
       }
     }
 
-    x.apply(this, arguments);
+    //execute default
+    reroute.apply(this, arguments);
   }
-}());
+}(ko));
