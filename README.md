@@ -1,5 +1,5 @@
 # Knockout Automatic Form Value Binding
-Ever used KnockoutJS on an excisting form? Tired writing model initializer code so you form values are used by the model? Well that's where this plugin comes in! Never write initializer code again.
+Ever used KnockoutJS on an excisting form? Tired of writing model initializer code so you form values are used as initial values by the model? Well that's where this plugin comes in! Never write initializer code again.
 
 ## Automatic form value binding
 1. Include the plugin
@@ -21,4 +21,4 @@ If you want to skip a certain element use:
 ## Example ASP.Net MVC - form binding per element
 `@Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "Enter a title", required = true, autofocus = true, data_bind = "textInput: title, initWithElementValue" })`
 
-
+Any questions? Ask on Twitter: https://twitter.com/KeesTalksTech
