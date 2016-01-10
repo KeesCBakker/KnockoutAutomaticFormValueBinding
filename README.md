@@ -1,6 +1,9 @@
 # Knockout Automatic Form Value Binding
 Ever used KnockoutJS on an excisting form? Tired of writing model initializer code so you form values are used as initial values by the model? Well that's where this plugin comes in! Never write initializer code again.
 
+Just include and activate:<br/>
+`<script type="text/javascript" src="https://cdn.rawgit.com/KeesCBakker/KnockoutAutomaticFormValueBinding/master/knockout-automatic-form-value-binding-1.0.min.js"></script>`
+
 ## Automatic form value binding
 1. Include the plugin
 2. Set `ko.automaticFormValueBinding = true;`
