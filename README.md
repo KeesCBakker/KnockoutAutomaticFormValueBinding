@@ -9,7 +9,7 @@ Just include and activate:<br/>
 2. Set `ko.automaticFormValueBinding = true;`
 3. Bind `ko.applyBindings({yourmodel});`
 
-If you want to skip a certain element use:<br/>
+If you want to _skip_ a certain element use:<br/>
 `<input data-bind="value: name, skipInitWithElementValue" placeholder="Nothing here!" />` <br/>
 
 ## Automatic form value binding per form
@@ -20,7 +20,7 @@ If you want to skip a certain element use:<br/>
 Form example: <br/>
 `<form action="{..}" data-auto-bind-values >`
 
-If you want to skip a certain element use: <br/>
+If you want to _skip_ a certain element use: <br/>
 `<input data-bind="value: name, skipInitWithElementValue" placeholder="Nothing here!" />` <br/>
 
 ## Form value binding per element
