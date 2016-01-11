@@ -7,7 +7,7 @@ Just include and activate:<br/>
 ## Automatic form value binding
 1. Include the plugin
 2. Set `ko.automaticFormValueBinding = true;`
-3. Bind `ko.applyBindings({yourmodel});`;
+3. Bind `ko.applyBindings({yourmodel});`
 
 If you want to skip a certain element use:<br/>
 `<input data-bind="value: name, skipInitWithElementValue" placeholder="Nothing here!" />` <br/>
@@ -15,7 +15,7 @@ If you want to skip a certain element use:<br/>
 ## Automatic form value binding per form
 1. Include the plugin
 2. Set add `data-auto-bind-values` as an attribute to the form
-3. Bind `ko.applyBindings({yourmodel});`;
+3. Bind `ko.applyBindings({yourmodel});`
 
 Form example: <br/>
 `<form action="{..}" data-auto-bind-values >`
